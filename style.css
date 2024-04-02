@@ -1316,7 +1316,7 @@ ul {
 	.img-1{
 		grid-area: v;
 		width: 100%;
-		max-width:300px;
+		max-width:380px;
 		margin-left: auto;
 		margin-right: auto;
 		padding: 50px;
@@ -1824,7 +1824,7 @@ ul {
 	
 }
 .img-1{
-	max-width: 400px;
+	max-width: 500px;
 }
 .img-2{
 	grid-area: image;
