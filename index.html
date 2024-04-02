@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>The Beatles</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="lightbox.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel='icon' href='icons/icon.jpg' type='image/x-icon' >
+    <link rel="manifest" href="manifest.json">
+	</head>
+	<body>
+		<script>
+			window.addEventListener("scroll",function(){
+			 var header = document.querySelector("header");
+			 header.classList.toggle("sticky",window.scrollY > 0);
+			})
+			
+			function reveal(){
+				let item = document.querySelectorAll("h5");
+				for (var i = 0; i < item.length;i++){
+					let windowHeight = window.innerHeight;
+					let elementTop = item[i].getBoundingClientRect().top;
+					let elementVisible =700;
+
+					if(elementTop < windowHeight - elementVisible){
+						item[i].classList.add("active")
+					}else{
+						item[i].classList.remove("active")
+					}
+				}
+
+				
+			}
+			window.addEventListener("scroll",reveal);
+		
+
+			$(document).ready(function () {
+				$('a[href^="#"], area[href^="#"]').on('click', function (e) {
+					var target = $($(this).attr('href'));
+					if (target.length) {
+					e.preventDefault();
+					var scrollMargin = target.css('scroll-margin-top'); 
+					var offset = scrollMargin ? parseInt(scrollMargin) : 0; 
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top - offset 
+					}, 800, 'swing', function () {
+						window.location.hash = target.attr('id');
+					});
+					}
+				});
+				});
+		</script>
+		
+		<div class="imageSection" id ="top">
+			<header id="header">
+				<div class="navbar">
+					<a href="#top" class="logo">The Beatles</a>
+					<input type="checkbox" id="nav"><label for="nav"></label>
+					<ul class="main-nav">
+						
+						<li><a href="#about">About</a></li>
+						<li><a href="#album">Album</a></li>
+						<li><a href="#artistpart">Artist</a></li>
+						<li><a href="#song">Song</a></li>
+						
+						<li><a href="#impact">Impact</a></li>
+					</ul>
+				</div>
+			</header>
+
+
+		
+			<div class="banner"></div>
+
+			<div class="section-1">
+				<div class="container">
+					<h2 class="title">The Beatles</h2>
+					<p class="p">
+						The Beatles were an English rock band formed in Liverpool in 1960, comprising John Lennon, Paul McCartney, George Harrison and Ringo Starr. They are regarded as the most influential band of all time and were integral to the development of 1960s counterculture and the recognition of popular music as an art form. 
+					</p>
+					<button class="button" onclick="window.open('https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2')">Listen</button>
+					<img src="imagex/front1.jpg" class="img" alt="image" >
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+		<div class="section-3" id="about">
+			<div class="container-2">
+				<h1 class="title2">Concerning</h1>
+				<p class="p1">
+					<span class="span1">Before</span> John, Paul, George and Ringo became the Beatles, they were simply four teenagers from Liverpool. Never could John Lennon, Paul McCartney, George Harrison and Ringo Starr have imagined they would go on to form one of the most successful groups in modern history, influencing the popular culture in not only music, but also fashion, film and global representation.<br>
+					<br>
+					In the late 1950s and early 1960s, it was difficult to imagine a band hailing from the relatively poor northwest port city of Liverpool, England, could get a gig in the thriving London music scene of the south, let alone export their eventual homegrown success to a world eagerly opening up to the counter-culture movement of the '60s and the burgeoning phenomenon that was called rock 'n' roll.
+				</p>
+				<p class="p2">
+					<span class="span1">A fateful meeting</span> between two music-loving teenagers in 1957 is where it all began. Sixteen-year-old rhythm-guitarist Lennon, the son of a merchant seaman, was performing with the Quarrymen, a skiffle (folk music blended with jazz or blues) band booked to perform at events at a church fete in Woolton, Liverpool. While setting up their instruments for the evening performance, the band’s bass player introduced Lennon to a classmate, 15-year-old McCartney, who would join in on a couple of numbers that night and soon would be offered a permanent spot in the Quarrymen.<br><br>
+					Harrison, the son of a bus conductor and shop assistant, joined the Quarrymen as lead guitarist at age 15. Influenced by rockabilly, his guitar licks would help shape the group’s early sound. Though still performing as the Quarrymen, Lennon, McCartney and Harrison would go on to form the core that would soon become the Beatles.
+					<br>
+					<br>
+					
+					<span class="span3">&#8212;Lennon and McCartney first met while playing in a skiffle band</span>
+				</p>
+				<p class="p-1">
+					The name of the band was in flux during this period, which would witness the group play under monikers Johnny and the Moon Dogs as well as The Silver Beetles and The Silver Beats. An art school student and friend of Lennon’s, Stuart Sutcliffe, was brought into the band to play bass. Sutcliffe and Lennon are often credited with coining the name the Beatles, though various stories abound on the actual origins. The name that would become synonymous with modern music was a combination of beetles and beat, hence the Beatles. <br>
+					<br >
+					Forging a friendship that would become the basis of their singer-songwriter partnership in the future, Lennon and McCartney would often go away together, playing acoustic sets in small pubs. “John and I used to hitch-hike places together,” McCartney says in Paul McCartney: Many Years From Now by Barry Miles. “It was something that we did together quite a lot; cementing our friendship, getting to know our feelings, our dreams, our ambitions together. It was a wonderful period. I look back on it with great fondness.”
+				</p>
+				<h1 class="title-1">「The Beatles' first single」</h1>
+				<p class="p-2">
+					<span class="span-1">The Beatles performed in Hamburg on and off from 1960 through 1962 with engagements back in Liverpool interspersed. It was at a performance at hometown venue the Cavern Club where Brian Epstein first saw the group play. Epstein was curious after hearing mention of them in his family-owned record store and in the pages of Mersey Beat magazine. He returned to take in the show a few more times and on December 10, 1961, Epstein approached the band about managing them, and a five-year contract was signed in January 1962.</span>
+					<br ><br>
+					Epstein saw the potential of the band, not just in their hometown but far beyond, especially now that the core four members were in place. He cleaned up their image and began to work in earnest to promote them. The band’s first U.K. single, “Please Please Me,” was recorded in November and released in January 1963. It topped the U.K. charts and began a streak that would see 11 of their 12 studio albums through 1970 reach No. 1 in the U.K. It would be Epstein who would eventually travel to the United States and secure a booking for the band on The Ed Sullivan Show.
+				</p>
+			    
+				<img src="imagex/beatles3.jpg" class="img-1" alt="img1" >
+				<img src="imagex/beatles.jpg" class="img1" alt="img2">
+				<img src="imagex/beatles2.jpg" alt="1" class="img2">
+				<img src="imagex/beatles.png" alt="1" class="img-2">
+			</div>
+		</div>
+		<div class="section-4" id="album">
+			<div class="container-3">
+			<h2 class="title3">「Albums」</h2>
+			<div class="shell">
+				<input type="radio" name="position">
+				<input type="radio" name="position">
+				<input type="radio" name="position" checked>
+				<input type="radio" name="position">
+				<input type="radio" name="position">
+				<div class="box">
+					<div class="item">
+						<div class="wrap"><img src="imagex/With the Beatles.jpg" class="img3" alt="beatles" ></div>
+						
+						<div class="content-1">
+							<div class="Album">《With The Beatles》</div>
+							<p class="p3">
+								Friday 22nd November, 1963 is still remembered by many, who lived through it as the day that President John F. Kennedy was assassinated in Dallas, Texas. Earlier on that eventful day, Parlophone had released the Beatles' second album. <br >
+								
+							</p>
+							<div><button class="button2" onclick="window.open('https://open.spotify.com/album/1aYdiJk6XKeHWGO3FzHHTr')">Listen</button></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="wrap"><img src="imagex/Rubber Soul.jpg" class="img3" alt="beatles" ></div>
+						
+						<div class="content-1">
+							<div class="Album">《Rubber Soul》</div>
+							<p class="p3">
+								Rubber Soul was another album for Christmas - released on 3rd December, 1965. Following the release of their previous album The Beatles had undertaken a momentous tour of the USA and Canada including a record breaking appearance at New York's famous Shea Stadium. <br >
+								
+							</p>
+							<div><button class="button2" onclick="window.open('https://open.spotify.com/album/50o7kf2wLwVmOTVYJOTplm')">Listen</button></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="wrap"><img src="imagex/Magical-Mystery-Tour.jpg" class="img3" alt="beatles" ></div>
+						
+						<div class="content-1">
+							<div class="Album">《Magical Mystery Tour》</div>
+							<p class="p3">
+								Magical Mystery Tour is a record by the English rock band the Beatles that was released as a double EP in the United Kingdom and an LP in the United States. It includes the soundtrack to the 1967 television film of the same name. <br >
+								
+							</p>
+							<div><button class="button2" onclick="window.open('https://open.spotify.com/album/2BtE7qm1qzM80p9vLSiXkj')">Listen</button></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="wrap"><img src="imagex/Abbey Road.jpg" class="img3" alt="beatles1" ></div>
+						
+						<div class="content-1">
+							<div class="Album">《Abbey Road》</div>
+							<p class="p3">
+								First issued on 26th September, 1969 Abbey Road was the final Beatles album to be recorded but not their last to be released. Let It Be, though mainly recorded in January, 1969 was finally released in May, 1970 alongside the film of the same name.<br >
+								
+							</p>
+							<div><button class="button2" onclick="window.open('https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN')">Listen</button></div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="wrap"><img src="imagex/CoverLetItBe.jpg" class="img3" alt="beatles1" ></div>
+						
+						<div class="content-1">
+							<div class="Album">《Let it be》</div>
+							<p class="p3">
+								Let It Be is the twelfth and final studio album by the English rock band the Beatles. It was released on 8 May 1970, almost a month after the group's public break-up, in tandem with the documentary of the same name. <br >
+								
+							</p>
+							<div><button class="button2" onclick="window.open('https://open.spotify.com/album/0jTGHV5xqHPvEcwL8f6YU5')">Listen</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		    </div>
+		</div>
+		<div class="section-2" id="artistpart">
+			<div class="content">
+				<h2 class="h2">「Members」</h2>
+				<div class = "cardContainer2">
+					<div class="artist">
+						<div class=" content-2">
+						
+						<h3>John Lennon</h3>
+						<p>John Winston Ono Lennon  was an English singer, songwriter and musician who gained worldwide fame as the founder, co-songwriter, co-lead vocalist and rhythm guitarist of the Beatles. His work included music, writing, drawings and film.</p>
+						<button id="artist1">more info</button>
+						</div>
+					</div>
+					<div class="artist">
+						<div class=" content-2">
+							<h3>Paul McCartney</h3>
+							<p>Sir James Paul McCartney  CH MBE is an English singer, songwriter and musician who gained worldwide fame with the Beatles, for whom he played bass guitar and shared primary songwriting and lead vocal duties with John Lennon</p>
+							<button  id="artist2">more info</button>
+					</div>
+					</div>
+					<div class="artist" >
+						<div class=" content-2">
+							<h3>George Harrison</h3>
+							<p>George Harrison was an English musician, singer and songwriter who achieved international fame as the lead guitarist of the Beatles. Harrison broadened the scope of popular music through his incorporation of Indian culture in the Beatles' work.</p>
+							<button id="artist3">more info</button>
+						</div>
+					</div>
+					<div class="artist">
+						<div class=" content-2">
+							<h3>Ringo Starr</h3>
+							<p>Sir Richard Starkey MBE, is an English musician, songwriter and actor who achieved international fame as the drummer for the Beatles. Starr occasionally sang lead vocals with the group, usually for one song on each album.</p>
+							<button id="artist4">more info</button>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-3" id="song">
+			<div class="container-4">
+				<h2 class="h3">「Released Singles」</h2>
+				<div class="div5">
+					<div class="div6"><img class="img6" src="imagex/help.jpg" alt="right" ></div>
+					<div class="div7">
+						<ul class="p6">
+							<h5  data-text ="1962" >1962</h5>
+							<li>Love Me Do</li>
+							<h5  data-text ="1963">1963</h5>
+							<li>Please Please Me</li>
+							<li>From Me To You</li>
+							<li>She Loves You</li>
+							<li>I Want To Hold Your Hand/li>
+							<h5 data-text ="1964"  id = "span2">1964</h5>
+							<li>All My Loving</li>
+							<li>Can’t Buy Me Love</li>
+							<li>Long Tall Sally</li>
+							<li>A Hard Day’s Night</li>
+							<li>I Feel Fine</li>
+							<h5  data-text ="1965">1965</h5>
+							<li>Help!</li>
+							<li>We Can Work It Out / Day Tripper</li>
+							<li>Yesterday</li>
+							<li>Ticket To Ride</li>
+							<h5 data-text ="1966">1966</h5>
+							<li>Paperback Writer</li>
+							<li>Eleanor Rigby / Yellow Submarine</li>
+							<h5  data-text ="1967">1967</h5>
+							<li>Hello, Goodbye</li>
+							<li>Strawberry Fields Forever / Penny Lane</li>
+							<li>All You Need Is Love</li>
+							<h5 data-text ="1968">1968</h5>
+							<li>Lady Madonna</li>
+							<li>Hey Jude</li>
+							<h5  data-text ="1969">1969</h5>
+							<li>Get Back</li>
+							<li>Something / Come Together</li>
+							<h5  data-text ="1970">1970</h5>
+							<li>Let It Be</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="lightbox" class="lightbox">
+			<div id="background">
+				<main class="space">
+					<div class="container-5">
+						<div class="div9"><h2 id="name" class="name">name</h2></div>
+						<div class="div8"><p id="message" class="message"></p></div>
+
+						<div class="div10"><img src="https://commons.wikimedia.org/wiki/File:Empty.png#/media/File:Empty.png" alt="random" id="artistimg" class="artistimg" ></div>
+						
+					</div>
+				</main>
+			</div>
+		</div>
+		<div class="section-5"  id="impact">
+			<div class="container-6">
+				<h2 class="h9">「Impact」</h2>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/WB2emRflAdU?si=fhd2p0y1pn9B5C4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id ="link2"></iframe>
+				<p class="question"><span class="span4">What made The Beatles so influential compared to other bands of their era?</span></p>
+				<p class="reason">
+					<span class="span5">The Beatles were not just musically innovative; they also had a profound influence on the cultural and social landscape of the 1960s and beyond. Their unique blend of pop, rock, and experimental music, combined with their charismatic personalities and intelligent humor, allowed them to connect with a wide audience. Additionally, their willingness to experiment with recording techniques and musical styles set new standards in the music industry, influencing countless artists across various genres.</span>
+				</p>
+				<img src="imagex/impact.jpg" class="beatlesimg" alt="beatlesimg" >
+				<p class="reason2">
+					<span class="span4"> Why are The Beatles still relevant today, decades after their breakup? </span><br>
+					<br >
+					<span class="span5" >The Beatles remain relevant due to their timeless music, innovative recording techniques, and their significant impact on culture and society. Their songs continue to resonate with new generations, thanks to their universal themes of love, peace, and understanding. Additionally, the band’s journey from humble beginnings to global superstardom offers enduring lessons in creativity, collaboration, and the power of music to connect people. The Beatles not only changed the landscape of popular music but also left an indelible mark on the global cultural consciousness, making their legacy as relevant today as it was over half a century ago.
+						</span>
+				</p>
+			</div>
+		</div>
+		</div>
+		<div class="section-6">
+			<div class="container-8">
+				<img src="imagex/end.jpg" class="endImage" alt="end" >
+				<h1 class="end">「END」</h1>
+				<p class="end3">In honor of The Beatles, I've created this website, and I hope you enjoy it, and I hope you'll share this website to the one who loves The Beatles.</p>
+				<ul class="end2">
+					<li class="icon-content">
+					  <a
+						class="link"
+						data-social="spotify"
+						aria-label="Spotify"
+						href="https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+					  >
+						<svg viewBox="0 0 100 100" version="1.1">
+						  <path
+							fill="currentColor"
+							d="M50,4C24.7,4,4,24.7,4,50s20.6,46,46,46s46-20.6,46-46S75.4,4,50,4z M71.6,71.5c0,0,0,0.1-0.1,0.1c-0.8,1.2-2,1.8-3.2,1.8  c-0.7,0-1.4-0.2-2-0.6c-10.2-6.3-23.3-7.7-38.8-4.1c-2.1,0.6-4-0.9-4.5-2.7c-0.6-2.3,0.9-4.1,2.7-4.6c17.7-4,32.6-2.3,44.4,5  c0.9,0.4,1.5,1,1.8,1.9C72.2,69.3,72.1,70.5,71.6,71.5z M76.9,59.3L76.9,59.3c-0.8,1.1-1.9,1.9-3.2,2.1c-0.2,0-0.5,0.1-0.7,0.1  c-0.8,0-1.6-0.3-2.3-0.7c-12-7.3-30.1-9.4-43.9-5c-2.5,0.6-5-0.7-5.6-3c-0.6-2.5,0.7-4.9,3-5.5c16.5-5,37.2-2.5,51.4,6.2  c0.8,0.4,1.5,1.3,1.8,2.5C77.9,57,77.6,58.3,76.9,59.3z M83.2,45.6c-1,1.4-2.7,2.1-4.4,2.1c-0.9,0-1.9-0.2-2.7-0.7c0,0,0,0,0,0  c-13.9-8.3-37.8-9.3-51.4-5.1c-2.7,0.8-5.5-0.7-6.4-3.3c-0.8-2.7,0.7-5.6,3.3-6.4c16.2-4.8,43-3.8,59.8,6.2  C83.8,39.6,84.7,42.9,83.2,45.6C83.3,45.5,83.3,45.5,83.2,45.6z"
+						  ></path>
+						</svg>
+					  </a>
+					  <div class="tooltip">Listen on Spotify</div>
+					</li>
+					<li class="icon-content">
+					  <a
+						class="link"
+						data-social="Github"
+						aria-label="Github"
+						href=""
+					  >
+						<svg  
+						width="16"
+						height="16"
+						fill="currentColor"
+						class="bi bi-github"
+						viewBox="0 0 16 16"
+						xml:space="preserve">
+						  <path
+							fill="currentColor"
+							d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+							
+						  ></path>
+						</svg>
+					  </a>
+					  <div class="tooltip">My Github Link</div>
+					</li>
+				</ul>
+					
+			</div>
+		</div>
+		
+	</body>
+</html>
