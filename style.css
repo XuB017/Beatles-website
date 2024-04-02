@@ -303,7 +303,7 @@ div::-webkit-scrollbar{
    
 	
 }
-.navbar ul li:nth-child(-n + 5){
+.navbar ul li:nth-child(-n + 4){
 	border-bottom: 1px solid grey;
 }
 
